@@ -44,7 +44,9 @@ if(file_stat.st_mode & S_IRUSR)perm[7]='w';
 if(file_stat.st_mode & S_IRUSR)perm[8]='x';
 
 
-
+  printf("%s : ",argv[i]);
+        printf("\tSize: %ld\n",file_stat.st_size);
+        printf("\t Type: %s \n",file_type);
 printf("\tPermissions: %s\n",perm);
 strcpy(perm,"---------");
 }
